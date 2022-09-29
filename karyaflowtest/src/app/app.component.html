@@ -1,0 +1,75 @@
+<div id="header"
+     class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Workflow Designer</h5>
+
+  <ul class="nav">
+    <li class="nav-item">
+      <button class="btn btn-primary" (click)="openActivityModel()">Add Activity</button>
+    </li>
+    <!-- <li class="nav-item">
+      <button class="btn btn-primary" (click)="openPropertyModel()">Add Property</button>
+    </li> -->
+    <li class="nav-item">
+      <button class="btn btn-secondary" (click)="importWorkflow()">Import</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn btn-secondary" (click)="exportWorkflow()">Export</button>
+    </li>
+    <!-- <li class="nav-item">
+      <wf-export-button workflow-designer-host="wfhost"></wf-export-button>
+    </li> -->
+    <li class="nav-item">
+      <button class="btn btn-secondary" (click)="newWorkFlow()">New Workflow</button>
+    </li>
+  
+  </ul>
+</div>
+<div class="loadertest">
+  <wf-designer 
+    #designer
+    [activityDefinitions] = "activityDefinition">
+  </wf-designer>
+  <!-- <wf-activity-picker #activitypicker activityDefinitions={activityDefinitions}></wf-activity-picker> -->
+</div>
+
+<div>
+  <div class="row">
+
+    <div class="col-3">
+      <div class="card">
+        <button class="btn btn-primary" (click)="showactivitypicker()">Show Activity picker</button>
+        <nav>
+          <nav-list>
+            <div *ngFor="let activity of activityList">
+              <div class="card activity">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class={{activity.icon}}></i>{{activity.displayName}}
+                  </h4>
+                    <p>{{activity.description}}</p>
+                    <a><span class="badge badge-light">{{activity.category}}</span></a>
+                </div>
+                <div class="card-footer text-muted text-xs-right">
+                  <a class="btn btn-primary btn-sm" (click)="addtoworkflow($event,activity)">Select</a>
+                </div>
+              </div>
+            </div>
+          </nav-list>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="col-9">
+      <div class="card">
+        <wf-designer-host
+          #designerHost
+          id="wfhost"
+          [activityDefinitionsData]="activityDefinition"
+          [workflowData]="workflowModel"
+          [attr.data-activity-definitions]="activityDefinition"
+          [attr.data-workflow]="workflowModel">
+        </wf-designer-host>
+      </div>
+    </div>
+  </div>
+</div>

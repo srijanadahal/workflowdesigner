@@ -1,0 +1,72 @@
+// @import "~ag-grid-community/dist/styles/ag-grid.css";
+// @import "~ag-grid-community/dist/styles/ag-theme-alpine-dark.css";
+// @import "~@ag-grid-community/all-modules/dist/styles/ag-theme-balham.cs.
+
+
+// .multiselect-dropdown[_ngcontent-dox-c186] .dropdown-btn[_ngcontent-dox-c186] .selected-item[_ngcontent-dox-c186] {
+//     display: inline-block !important;
+// }
+::ng-deep{
+    .card-body{
+        font-size: 14px!important;
+    }
+    .mat-form-field{
+        width: 70%!important;
+    }
+    .mat-form-field-wrapper{
+    padding-bottom: 10px !important;
+  
+    }
+    input.mat-input-element{
+        margin-top:-1px!important;
+    }
+    .mat-select-value {
+    padding-left: 10px!important;
+    }
+    .mat-form-group {
+    display: flex;
+    width: 100%!important;
+    }
+  
+  }
+  .row{
+    .col-4{
+        padding-right: 45px;
+    }
+  
+  }
+  .row{
+      .col-4{
+          padding-right: 45px;
+      }
+  
+  }
+  .form-container{
+    display: flex;
+    .formLabel{
+        width: 40%!important;
+        margin: 0;
+    }
+  }
+  .btn-container{
+    display: flex;
+    justify-content: end;
+    margin-top: 4px;
+    .btn{
+        display: flex;
+         flex-direction: row;
+        // height: 34px;
+    }
+    .btn-primary{
+        margin-right: 5px!important;
+    }
+    .btn-dark{
+        margin-right: 7px !important;
+    }
+    .btn-success{
+        background-color: #009688!Important;
+    border-color: #009688!important;
+    }
+  }
+  
+  

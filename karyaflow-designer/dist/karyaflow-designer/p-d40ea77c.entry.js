@@ -1,0 +1,1 @@
+import{r as t,h as s,H as l}from"./p-475d6205.js";const r=class{constructor(s){t(this,s)}render(){const t=this.name,r=this.items;return s(l,null,s("label",{htmlFor:t},this.label),s("input",{id:t,name:t,type:"text",class:"form-control",value:r}),s("small",{class:"form-text text-muted"},this.hint))}};r.style="";export{r as wf_list_field}

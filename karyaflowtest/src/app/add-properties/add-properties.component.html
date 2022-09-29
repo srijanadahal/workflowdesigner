@@ -1,0 +1,54 @@
+
+
+  <div class="card-body" >
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="addPropertiesForm">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="propertyName">
+                            propertyName
+                        </label>
+                        <input class="col-9" id="propertyName" type="text"  formControlName="propertyName">
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="propertyType">
+                            property type
+                        </label>
+                        <input class="col-9" id="propertyType" type="text" formControlName="propertyType">
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="label">
+                            label
+                        </label>
+                        <input class="col-9" id="label" type="text" formControlName="label">
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="hint">
+                            hint
+                        </label>
+                        <input class="col-9" id="hint" type="text" formControlName="hint">
+                    </div>                   
+                </div>
+                <div class="row" style="display: none;">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="options">
+                            options
+                        </label>
+                        <input class="col-9" id="options" type="text" formControlName="options">
+                    </div>                   
+                </div>
+
+                <button class="btn btn-lg btn-outline-primary" (click)="AddProperty()">Save</button>
+  
+            </form>
+        </div>
+    </div>
+  </div>   
+

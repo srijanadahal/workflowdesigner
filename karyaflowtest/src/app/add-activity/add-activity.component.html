@@ -1,0 +1,103 @@
+
+<!-- <form [formGroup]="addActivityForm">
+    <button class="btn btn-lg btn-outline-primary" (click)="AddActivity()">Save</button>
+  
+  </form> -->
+  <div class="card-body" >
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="addActivityForm">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="activitytype">
+                            activitytype
+                        </label>
+                        <input class="col-9" id="activitytype" type="text"  formControlName="activitytype">
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="displayName">
+                            display Name
+                        </label>
+                        <input class="col-9" id="displayName" type="text" formControlName="displayName">
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="description">
+                            description
+                        </label>
+                        <input class="col-9" id="description" type="text" formControlName="description">
+                    </div>                   
+                </div>
+                <div class="row" style="display: none;">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="runtimeDescription">
+                            runtime Description
+                        </label>
+                        <input class="col-9" id="runtimeDescription" type="text" formControlName="runtimeDescription">
+                    </div>                   
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="category" >
+                            category
+                        </label>
+                        <div class="col-9">
+                            <div class="col-9">
+                                <select id="category" name="category" formControlName="category">
+                                    <option value="" disabled>Choose category</option>
+                                    <option *ngFor="let c of categoryList" formControlValue="c">{{ c.name }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="icon">
+                            icon
+                        </label>
+                        <input class="col-9" id="icon" type="text" formControlName="icon">
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3 formLabel">
+                            outcomes
+                        </label>
+                        <div class="col-9">
+                            <mat-form-field >
+                                <mat-select formControlName="outcomes" multiple [(ngModel)]="outcomes">
+                                    <mat-option *ngFor="let location of outcomesList " value={{location.name}}>{{location.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="block col-3" for="properties" >
+                            properties
+                        </label>
+                        <div class="col-9">
+                            <mat-form-field >
+                                <mat-select formControlName="properties" multiple [(ngModel)]="properties">
+                                    <mat-option value="" disabled>Choose properties</mat-option>
+                                    <mat-option *ngFor="let c of PropertyList" value={{c.id}}>{{c.propertyName}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-lg btn-outline-primary" (click)="AddActivity()">Save</button>
+  
+            </form>
+        </div>
+    </div>
+  </div>   
